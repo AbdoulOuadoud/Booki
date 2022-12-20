@@ -155,7 +155,6 @@ a {
     z-index: var(--z-fixed);
     background-color: var(--body-color);
     background-color: #fff;
-    padding: 20px 0px;
 }
 .nav{
     display: flex;
@@ -204,7 +203,7 @@ a {
 }
 
 .main{
-    margin-top: 190px;
+    margin-top: 250px;
 }
 
 /* Buttons */
@@ -488,6 +487,9 @@ a {
 }
 
 @media (max-width: 640px){
+    .header {
+        padding: 20px 0px;
+    }
     .main {
         margin-top: 280px;
     }
