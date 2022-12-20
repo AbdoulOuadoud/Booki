@@ -118,6 +118,9 @@ a {
 .icon-state{
     background-image: url("../assets/icones/state.svg");
 }
+.icon-search{
+    background-image: url("../assets/icones/search.svg");
+}
 
 
 /* Reusable css classes */
@@ -152,6 +155,7 @@ a {
     z-index: var(--z-fixed);
     background-color: var(--body-color);
     background-color: #fff;
+    padding: 20px 0px;
 }
 .nav{
     display: flex;
@@ -249,6 +253,9 @@ a {
     gap: 30px;
     align-items: center;
 }
+.search__icon{
+    display: none;
+}
 .filter__container span{
     font-size:  var(--small-font-size);
     font-weight: var(--font-semi-bold);
@@ -289,6 +296,7 @@ a {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    box-sizing: border-box;
 }
 .offer__container h2{
     margin: 0;
@@ -331,13 +339,14 @@ a {
     color: black;
 }
 .sponsored__offer{
-    width: 30%;
+    width: 25%;
     padding: 30px;
     background-color: var(--first-color-alt);
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     gap: 30px;
+    box-sizing: border-box;
 }
 .sponsored__offer_title{
     display: flex;
@@ -418,8 +427,8 @@ a {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
     background-color: var(--first-color-alt);
     padding: var(--mb-2-5) var(--mb-3);
     box-sizing: border-box;
@@ -438,7 +447,6 @@ a {
     font-size: var(--normal-font-size);
     font-weight: var(--font-semi-bold);
 }
-    
 .footer__item1 {
     grid-area: 1 / 1 / 2 / 2; 
 }
@@ -448,7 +456,141 @@ a {
 .footer__item3 {
     grid-area: 1 / 3 / 2 / 4; 
 }
+
 /* Tablebtte */
+
+@media (max-width: 1024px){
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .offer__container{
+        flex-direction: column;
+    }
+
+    .main__offer{
+        width: 100%;
+    }
+
+    .sponsored__offer {
+        width: 100%;
+        /* flex-direction: row; */
+    }
+    .sponsored__offer__wrapper {
+        flex-direction: row;
+    }
+    .card__type__image {
+        width: 100%;
+    }
+    .card__activity_image {
+        height: 250px;
+    }
+}
+
+@media (max-width: 640px){
+    .main {
+        margin-top: 280px;
+    }
+    /* .container {
+        width: 100%;
+    } */
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .nav__item.active-link {
+        border-top: none;
+        border-bottom: 3px solid var(--first-color);
+    }
+    
+    .active-link {
+        color: var(--first-color);
+    }
+    .filter__container {
+        display: flex;
+        column-gap: 0;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .filter__container .filter__title{
+        width: 100%;
+    }
+    .filter_item {
+        width: calc(50% - 15px);
+        padding: 0 0 0 15px;
+    }
+    .location__container {
+        /* width: 90%; */
+        width: fit-content;
+    }
+
+    .form__control {
+        /* flex: 1; */
+    }
+    .main__offer_wrapper {
+        flex-direction: column;
+    }
+    .card {
+        width: 100%;
+    }
+    .sponsored__offer__wrapper {
+        flex-direction: column;
+    }
+    .sponsored__offer {
+        order: -1;
+    }
+    .activities__wrapper {
+        flex-direction: column;
+    }
+    .card__activity {
+        width: 100%;
+    }
+    .footer__container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+    .footer__item1 {
+        grid-area: 1 / 1 / 2 / 2; 
+    }
+    .footer__item2 {
+        grid-area: 2 / 1 / 3 / 2; 
+    }
+    .footer__item3 {
+        grid-area: 3 / 1 / 4 / 2; 
+    }
+    .filter__container span {
+        font-size: 11px;
+        line-height: 13px;
+    }
+    .search__text{
+        display: none;
+    }
+    .search__icon{
+        display: block;
+    }
+    .nav__item {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+    .nav__menu {
+        width: 100%;
+    }
+    .nav__list{
+        width: 100%;
+        padding: 0;
+        gap: 0;
+    }
+    .nav__item {
+        width: 50%;
+        justify-content: center;
+    }
+    .welcom__message {
+        padding-top: 20px;
+    }
+}
 
 
 
